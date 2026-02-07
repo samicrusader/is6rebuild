@@ -203,8 +203,8 @@ def main():
                 check=True,
                 capture_output=True,
             )
-            #if result.stdout:
-                #print(result.stdout.decode('oem', errors='ignore'))
+            if result.stdout:
+                print(result.stdout.decode('oem', errors='ignore'))
 
         # Step 11: Replace first 512 bytes in data2.cab with the in-memory content from step 7
         with open("data2.cab", "r+b") as f:
@@ -228,3 +228,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
