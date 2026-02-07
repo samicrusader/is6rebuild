@@ -165,8 +165,8 @@ def main():
 
     finally:
         # Step 13: Cleanup and restore original files
-        #if os.path.exists("replace.ini"):
-            #os.remove("replace.ini")
+        if os.path.exists("replace.ini"):
+            os.remove("replace.ini")
 
         for fname in backup_files:
             backup_path = os.path.join(temp_dir, fname)
@@ -178,3 +178,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
